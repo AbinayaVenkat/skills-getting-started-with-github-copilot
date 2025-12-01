@@ -27,7 +27,9 @@
               <ul class="participants-list">
                 <li>Alice</li>
                 <li>Bob</li>
-                <!-- ... -->
+                ${details.participants.length === 0
+                  ? '<li><em>No participants yet</em></li>'
+                  : details.participants.map(email => `<li class="participant-item" data-email="${email}">${email} <span class="delete-icon" title="Remove">&#128465;</span></li>`).join('')}
               </ul>
             </div>
           </div>
