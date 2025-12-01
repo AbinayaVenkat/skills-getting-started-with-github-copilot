@@ -17,6 +17,23 @@
         <h3>Available Activities</h3>
         <div id="activities-list">
           <!-- Activities will be loaded here -->
+          <!-- Example structure for each activity card:
+          <div class="activity-card">
+            <h4>Activity Name</h4>
+            <p>Description of the activity.</p>
+            <!-- ...other activity details... -->
+            <div class="participants-section">
+              <h5>Participants</h5>
+              <ul class="participants-list">
+                <li>Alice</li>
+                <li>Bob</li>
+                ${details.participants.length === 0
+                  ? '<li><em>No participants yet</em></li>'
+                  : details.participants.map(email => `<li class="participant-item" data-email="${email}">${email} <span class="delete-icon" title="Remove">&#128465;</span></li>`).join('')}
+              </ul>
+            </div>
+          </div>
+          -->
           <p>Loading activities...</p>
         </div>
       </section>
